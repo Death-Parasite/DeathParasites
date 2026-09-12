@@ -1,0 +1,90 @@
+.env {
+  position: relative;
+  z-index: 1;
+  background: var(--color-bg);
+  height: 100vh; /* Make it exactly full height so pin is centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.env__header {
+  padding: 0 var(--space-lg);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  position: absolute;
+  top: var(--space-2xl);
+  left: 0;
+  width: 100%;
+}
+
+.env__viewport {
+  width: 100vw;
+  position: relative;
+  /* Remove overflow hidden to let it breathe if needed, or keep for safety */
+  overflow: hidden;
+  padding: var(--space-xl) 0;
+}
+
+.env__track {
+  display: flex;
+  gap: var(--space-2xl);
+  padding: 0 var(--space-lg);
+  width: max-content;
+  align-items: center; /* Center images vertically */
+}
+
+.env__image-wrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 900px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface);
+  padding: var(--space-sm);
+  transition: border-color var(--duration-normal) var(--ease-out);
+}
+
+.env__image-wrapper:hover {
+  border-color: var(--color-accent);
+}
+
+.env__image-metadata {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xs) var(--space-sm) var(--space-md) var(--space-sm);
+  color: var(--color-text-tertiary);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.env__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) contrast(1.1);
+  transition: filter var(--duration-normal) var(--ease-out);
+}
+
+.env__image-wrapper:hover .env__image {
+  filter: grayscale(0%) contrast(1.2);
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  .env {
+    height: 90vh;
+  }
+  .env__header {
+    top: var(--space-xl);
+  }
+  .env__image-wrapper {
+    width: 90vw;
+  }
+  .env__track {
+    gap: var(--space-lg);
+  }
+}

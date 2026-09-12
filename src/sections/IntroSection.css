@@ -1,0 +1,126 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 1.2s var(--ease-dramatic);
+}
+
+.intro--exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.8) 100%);
+  pointer-events: none;
+}
+
+/* Reveal */
+.intro__reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s var(--ease-dramatic);
+}
+
+.intro__reveal--active {
+  opacity: 1;
+}
+
+.intro__reveal-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-text-tertiary), transparent);
+  animation: revealPulse 2s ease-in-out infinite;
+}
+
+@keyframes revealPulse {
+  0%, 100% { opacity: 0.3; width: 60px; }
+  50% { opacity: 0.8; width: 100px; }
+}
+
+/* Studio */
+.intro__studio {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s var(--ease-dramatic) 0.3s,
+              transform 1s var(--ease-dramatic) 0.3s;
+}
+
+.intro__studio--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro__studio-label {
+  font-size: var(--text-micro);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.3em;
+}
+
+.intro__studio-name {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.15em;
+}
+
+/* Title */
+.intro__title {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.2s var(--ease-dramatic),
+              transform 1.2s var(--ease-dramatic);
+}
+
+.intro__title--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.intro__logo {
+  max-width: 600px;
+  width: 90vw;
+  height: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 40px rgba(255, 30, 30, 0.5));
+}
+
+/* Skip */
+.intro__skip {
+  position: absolute;
+  bottom: var(--space-xl);
+  font-size: var(--text-micro);
+  color: var(--color-text-muted);
+  letter-spacing: 0.2em;
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out);
+}
+
+.intro__skip--visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro {
+    display: none;
+  }
+}
