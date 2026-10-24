@@ -1,3 +1,4 @@
+// Death Parasites Build v1.0.2 - 2026-10-24
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';

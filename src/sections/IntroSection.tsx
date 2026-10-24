@@ -6,7 +6,7 @@ export const IntroSection: React.FC = () => {
   const setIntroComplete = useExperienceStore((s) => s.setIntroComplete);
   const introComplete = useExperienceStore((s) => s.introComplete);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [phase, setPhase] = useState<'black' | 'reveal' | 'studio' | 'title' | 'done'>('black');
+  const [phase, setPhase] = useState<'black' | 'reveal' | 'studio' | 'title' | 'done'>('reveal');
 
   useEffect(() => {
     // Check for repeat visit
@@ -25,16 +25,15 @@ export const IntroSection: React.FC = () => {
       return;
     }
 
-    // Timeline
+    // Timeline - tight and fast
     const timers: ReturnType<typeof setTimeout>[] = [];
-    timers.push(setTimeout(() => setPhase('reveal'), 1800));
-    timers.push(setTimeout(() => setPhase('studio'), 3200));
-    timers.push(setTimeout(() => setPhase('title'), 5000));
+    timers.push(setTimeout(() => setPhase('studio'), 1200));
+    timers.push(setTimeout(() => setPhase('title'), 2600));
     timers.push(setTimeout(() => {
       setPhase('done');
       setIntroComplete(true);
       sessionStorage.setItem('dp-visited', '1');
-    }, 7000));
+    }, 4500));
 
     return () => timers.forEach(clearTimeout);
   }, [setIntroComplete]);
@@ -79,8 +78,8 @@ export const IntroSection: React.FC = () => {
       </div>
 
       {/* Skip hint */}
-      <div className={`intro__skip font-mono ${phase !== 'black' ? 'intro__skip--visible' : ''}`}>
-        CLICK TO SKIP
+      <div className="intro__skip font-mono intro__skip--visible">
+        CLICK TO ENTER / SKIP
       </div>
     </div>
   );
