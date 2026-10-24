@@ -1,10 +1,10 @@
 const assetPaths = {
-  poster: ['/assets/dp01poster.png', '/assets/dp01poster.jpg'],
-  introImage: ['/assets/IMG-20260614-WA0009.jpg'],
-  firefly: ['/assets/Firefly_RemoveBackground.png'],
-  character1: ['/assets/IMG-20260619-WA0027.jpg', '/assets/Cpaute.png'],
-  character2: ['/assets/IMG-20260620-WA0005(1).jpg'],
-  character3: ['/assets/Cpauter.1'],
+  poster: ['./assets/dp01poster.png', './assets/dp01poster.jpg'],
+  introImage: ['./assets/IMG-20260614-WA0009.jpg'],
+  firefly: ['./assets/Firefly_RemoveBackground.png'],
+  character1: ['./assets/IMG-20260619-WA0027.jpg', './assets/Cpaute.png'],
+  character2: ['./assets/IMG-20260620-WA0005(1).jpg'],
+  character3: ['./assets/Cpauter.1'],
 } as const;
 
 export type AssetKey = keyof typeof assetPaths;

@@ -20,7 +20,7 @@ export const characters: Character[] = [
     weight: { kg: 89, lb: 196, display: '89 kg / 196 lb' },
     birthYear: 1987,
     bio: 'A powerful, smart and fearless soldier who continues the mission after losing his team. Disciplined, capable under pressure and determined to discover what is happening inside the villa.',
-    image: '/assets/IMG-20260619-WA0027.jpg'
+    image: './assets/IMG-20260619-WA0027.jpg'
   },
   {
     id: 'edward-harrington',
@@ -31,7 +31,7 @@ export const characters: Character[] = [
     weight: { kg: 72, lb: 159, display: '72 kg / 159 lb' },
     birthYear: 1964,
     bio: 'A senior government officer connected to the operation. Calm, experienced and strategic, with a difficult-to-read presence.',
-    image: '/assets/IMG-20260620-WA0005(1).jpg'
+    image: './assets/IMG-20260620-WA0005(1).jpg'
   },
   {
     id: 'silas-graves',
@@ -42,6 +42,6 @@ export const characters: Character[] = [
     weight: { kg: 102, lb: 225, display: '102 kg / 225 lb' },
     birthYear: 1971,
     bio: 'A dangerous former soldier with a ruthless presence. Intelligent, physically imposing, unpredictable and highly capable.',
-    image: '/assets/Cpauter.1'
+    image: './assets/Cpauter.1'
   },
 ];

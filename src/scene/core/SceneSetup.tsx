@@ -33,7 +33,7 @@ const SceneContent: React.FC = () => {
       {/* 3D Images - The $10k Premium Upgrade */}
       {/* Hero Poster - Starts roughly around Z=0, moves up as you scroll */}
       <FloatingImage 
-        url="/assets/dp01poster.jpg" 
+        url="./assets/dp01poster.jpg" 
         position={[2.5, 0, -2]} 
         size={[3, 4.5]} 
         scrollOffset={scrollProgress}
@@ -42,7 +42,7 @@ const SceneContent: React.FC = () => {
       
       {/* Character Portraits - positioned further back in Z, waiting to be scrolled up */}
       <FloatingImage 
-        url="/assets/IMG-20260619-WA0027.jpg" 
+        url="./assets/IMG-20260619-WA0027.jpg" 
         position={[-3.5, -25, -5]} 
         size={[2.5, 3.5]} 
         scrollOffset={scrollProgress}
@@ -50,7 +50,7 @@ const SceneContent: React.FC = () => {
       />
       
       <FloatingImage 
-        url="/assets/IMG-20260620-WA0005(1).jpg" 
+        url="./assets/IMG-20260620-WA0005(1).jpg" 
         position={[0, -28, -6]} 
         size={[2.5, 3.5]} 
         scrollOffset={scrollProgress}
@@ -58,7 +58,7 @@ const SceneContent: React.FC = () => {
       />
 
       <FloatingImage 
-        url="/assets/Cpauter.1" 
+        url="./assets/Cpauter.1" 
         position={[3.5, -30, -7]} 
         size={[2.5, 3.5]} 
         scrollOffset={scrollProgress}

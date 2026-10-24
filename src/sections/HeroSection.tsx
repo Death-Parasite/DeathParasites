@@ -71,7 +71,7 @@ export const HeroSection: React.FC = () => {
           <span className="hero__label font-mono hero__animate">UPCOMING TITLE</span>
           
           <div className="hero__logo-wrapper hero__animate" style={{ display: 'none' }}>
-            <img src="/assets/logo.jpg" alt="Death Parasites Logo" className="hero__logo" />
+            <img src="./assets/logo.jpg" alt="Death Parasites Logo" className="hero__logo" />
           </div>
 
           <h1 className="hero__title font-display hero__animate" style={{ color: 'white', fontSize: 'clamp(3rem, 12vw, 9rem)', letterSpacing: '0.05em' }}>

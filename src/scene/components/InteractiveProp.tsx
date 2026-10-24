@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { useExperienceStore } from '@/hooks/useExperienceStore';
 
 // Preload the model
-useGLTF.preload('/assets/model/pipe_wrench_2k.gltf');
+useGLTF.preload('./assets/model/pipe_wrench_2k.gltf');
 
 export const InteractiveProp: React.FC = () => {
   const meshRef = useRef<THREE.Group>(null);
@@ -13,7 +13,7 @@ export const InteractiveProp: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   const { viewport } = useThree();
 
-  const { scene } = useGLTF('/assets/model/pipe_wrench_2k.gltf');
+  const { scene } = useGLTF('./assets/model/pipe_wrench_2k.gltf');
 
   // Animation logic: 
   // It starts hanging in the air (Y = high up)

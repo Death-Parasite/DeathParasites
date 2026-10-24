@@ -51,7 +51,7 @@ export const Navigation: React.FC = () => {
       >
         <div className="nav__inner">
           <div className="nav__brand">
-            <img src="/assets/logo.jpg" alt="Death Parasites" style={{ height: '32px', mixBlendMode: 'screen' }} />
+            <img src="./assets/logo.jpg" alt="Death Parasites" style={{ height: '32px', mixBlendMode: 'screen' }} />
           </div>
 
           {/* Desktop nav */}

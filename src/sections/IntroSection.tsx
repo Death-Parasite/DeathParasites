@@ -75,7 +75,7 @@ export const IntroSection: React.FC = () => {
 
       {/* Phase: Title */}
       <div className={`intro__title ${phase === 'title' ? 'intro__title--active' : ''}`}>
-        <img src="/assets/logo.jpg" alt="Death Parasites" className="intro__logo" />
+        <img src="./assets/logo.jpg" alt="Death Parasites" className="intro__logo" />
       </div>
 
       {/* Skip hint */}

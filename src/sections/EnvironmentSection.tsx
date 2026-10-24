@@ -7,10 +7,10 @@ import './EnvironmentSection.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { id: '1', src: '/assets/game_1.jpg', alt: 'Game Asset Block' },
-  { id: '2', src: '/assets/game_2.jpg', alt: 'Pale Hand Asset' },
-  { id: '3', src: '/assets/game_3.jpg', alt: 'Jerrycan Environment' },
-  { id: '4', src: '/assets/game_4.jpg', alt: 'Gloved Arms Asset' },
+  { id: '1', src: './assets/game_1.jpg', alt: 'Game Asset Block' },
+  { id: '2', src: './assets/game_2.jpg', alt: 'Pale Hand Asset' },
+  { id: '3', src: './assets/game_3.jpg', alt: 'Jerrycan Environment' },
+  { id: '4', src: './assets/game_4.jpg', alt: 'Gloved Arms Asset' },
 ];
 
 export const EnvironmentSection: React.FC = () => {
